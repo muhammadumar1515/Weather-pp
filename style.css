@@ -1,0 +1,121 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #6E7F9A, #3B4F72);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-container:hover {
+    transform: scale(1.05);
+}
+
+h1.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#city-input {
+    padding: 12px 20px;
+    width: 70%;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#city-input:focus {
+    border-color: #FF8C00;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#search-btn {
+    padding: 12px 20px;
+    background-color: #FF8C00;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #FF6A00;
+}
+
+.weather-info {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.weather-info div {
+    margin: 10px 0;
+}
+
+.error-message {
+    display: none;
+    background-color: rgba(255, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 400px) {
+    .weather-container {
+        width: 280px;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    #city-input, #search-btn {
+        font-size: 1rem;
+    }
+}
